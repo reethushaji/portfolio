@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald);
+body {
+  background: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0.5px 0.5px 0 #afbbc2;
+  
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.75s;
+}
+
+.widgets {
+
+
+  padding: 0px;
+  width: 100%;
+  
+  margin:0 0 0 0;
+}
+
+.widgets ul {
+  list-style-type: none;
+}
+
+.widgets li a {
+  padding:158px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 15px;
+  
+  color: #000000;
+  text-decoration: none;
+}
+
+/* partial:index.partial.html -->
+ li a:hover .circle {
+  position: relative;
+  z-index: 1;
+  top: -60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  animation: illuminate 2s ease-out infinite;
+  background: #fdc6be;
+}  
+   */
+
+.widgets li i {
+
+  width:350px;
+  margin-right:0%;
+}
+
+.widgets li a:hover i {
+  transform: translateY(-30px);
+}
+
+.widgets li a .title {
+  font-size: 0px;
+}
+
+.widgets li a:hover .title {
+  transform: translateY(10px);
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+.widgets li a.title:hover {
+  transform: translateY(-10px);
+}
+
+.widgets li:first-child a {
+  background: rgb(222, 221, 221) !important;
+}
+
+.widgets li:nth-child(2) a {
+  background: rgb(222, 221, 221) !important;
+}
+
+
+
+.widgets li:first-child:hover ~ .background {
+  background: #bfc7ce;
+}
+
+.widgets li:nth-child(2):hover ~ .background {
+  background: #379683;
+}
+
+
+
+@keyframes illuminate {
+  0% {
+    transform: scale(0.7, 0.7);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
